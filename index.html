@@ -5,6 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+
+    <script>
+        function showMessage(event) {
+            event.preventDefault(); // Prevent the form from actually submitting
+            alert("Your response has been submitted!");
+
+            document.getElementById("message").value = ""; // Clear the text area
+        }
+    </script>
+    
 </head>
 <body>
     <header>
@@ -18,9 +28,15 @@
         <p>I have played a lot of different games from different franchises. I can say that am familiar with the world of videogames and their mechanics. My favorite type of games is hardcore games.</p>
         <p>One of my main goals is to develop and beta test games. One game that I would like to participate in its closed beta testing is Project Zomboid that they are soon to release its build 42 to the game.</p>
     </div>
-    <li><a href= "https://github.com/Korvaxus" target="blank">Github.</a></li>
-    <li><a href= "https://www.linkedin.com/in/carlos-pena-473753329/" target="blank">LinkedIn.</a></li>
-    <li><a href= "https://www.youtube.com/" target="blank">Portfolio. </a></li>
+
+    <div>
+        <h3>My Links</h3>
+        <li><a href= "https://github.com/Korvaxus" target="blank">Github.</a></li>
+        <li><a href= "https://www.linkedin.com/in/carlos-pena-473753329/" target="blank">LinkedIn.</a></li>
+        <li><a href= "https://www.youtube.com/" target="blank">Portfolio. </a></li>
+
+    </div>
+    
 
     <div>
     <h3>Skills</h3>
@@ -60,10 +76,18 @@
  <td>2023-present</td>
  </tr>
 
-</table>
+ </table>
 
+ </div>
 
-     </div>
+ <div>
+    <h2>Connect with Me</h2>
+    <form action="#" onsubmit="showMessage(event)">
+        <label for="message">Your Message:</label><br>
+        <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
+        <input type="submit" value="Submit">
+    </form>
+ </div>
 
 </body>
 </html>
